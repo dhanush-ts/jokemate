@@ -1,7 +1,9 @@
 import { useRef, useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 export const Word = () => {
     const textref = useRef("");
+    const nav = useNavigate()
     const [words, setWords] = useState(0);
     const [char, setChar] = useState(0);
 
@@ -37,7 +39,8 @@ export const Word = () => {
             </div>
             
         </div>
-    
+
+        <p onClick={() => nav("joke")} className="text-center text-lg hover:underline text-blue-500">Tired on typing ?, Click me to hear a joke !</p>
         
     </main>
   )
